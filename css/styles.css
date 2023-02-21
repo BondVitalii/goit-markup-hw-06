@@ -122,7 +122,6 @@ img {
 .white-text-footer {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5px;
 
   color: var(--basic-white-txt-cl);
 }
@@ -189,7 +188,7 @@ img {
 
 /*########## Individual Styles ##########*/
 
-/*======= Header =======*/
+/*======= HEADER =======*/
 .section-header {
   border-bottom: 1px solid var(--accent-txt-cl);
 }
@@ -272,7 +271,7 @@ img {
   color: var(--pressed-txt-cl);
 }
 
-/*======= Hero =======*/
+/*======= HERO =======*/
 .hero {
   background-color: var(--navyblue-dark-bg-cl);
 }
@@ -325,7 +324,7 @@ img {
   background-color: var(--pressed-bg-cl);
 }
 
-/*======= Advantage =======*/
+/*======= ADVANTAGE =======*/
 .section-advantage {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -358,7 +357,7 @@ img {
   margin-bottom: 8px;
 }
 
-/*======= Benefits =======*/
+/*======= BENEFITS =======*/
 .section-benefits {
   padding-bottom: 120px;
 }
@@ -370,7 +369,7 @@ img {
   margin-left: 24px;
 }
 
-/*======= Team =======*/
+/*======= TEAM =======*/
 .team {
   background-color: var(--cloud-light-bg-cl);
 }
@@ -411,7 +410,7 @@ img {
   background-color: var(--pressed-bg-cl);
 }
 
-/*======= Customers =======*/
+/*======= CUSTOMERS =======*/
 .customers-section {
   padding-top: 130px;
   padding-bottom: 120px;
@@ -445,7 +444,7 @@ img {
   fill: var(--pressed-bg-cl);
 }
 
-/*======= Footer =======*/
+/*======= FOOTER=======*/
 .section-footer {
   padding: 100px 0px;
 }
@@ -457,7 +456,7 @@ img {
   align-items: baseline;
 }
 
-/*footer-logo-box */
+/*footer-logo*/
 .footer-box-logo {
   margin-right: 120px;
 }
@@ -471,8 +470,10 @@ img {
   color: var(--accent-txt-cl);
 }
 
-/*footer-social-media */
-.footer-social-title, .footer-form-title {
+/*social-media*/
+.footer-social-title,
+.footer-form-title {
+  display: inline-block;
   margin-bottom: 16px;
 }
 
@@ -484,8 +485,7 @@ img {
   gap: 16px;
 }
 
-.social-media-foote.icon-grey {
-  
+.social-media-link.icon-grey {
   fill: var(--cloud-light-bg-cl);
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -494,10 +494,59 @@ img {
   background-color: var(--green-bg-cl);
 }
 
-/* subscribe form */
+/*subscribe-form*/
+.footer-form {
+}
+
+.subscribe-form {
+  /* flex-grow: 1; */
+  display: flex;
+
+  width: 100%;
+
+  gap: var(--ident);
+}
+
+.footer-form-title {
+  display: block;
+  /* display: inline-block; */
+}
+
+.footer-form-input {
+  /* margin-right: var(--ident); */
 
 
-/*======= Portfolio =======*/
+  padding: 7px 15px;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 264px;
+  height: 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  background-color: transparent;
+}
+
+.footer-btn-submit {
+  padding: 8px 23px;
+
+  min-width: 165px;
+
+  display: flex;
+  align-items: center;
+}
+.icon-subscribe {
+  fill: var(--basic-white-bg-cl);
+  margin-left: 16px;
+}
+
+/*======= PORTFOLIO =======*/
 .section-portfolio {
   padding: 96px 0 120px;
 }
@@ -585,7 +634,7 @@ img {
   row-gap: 48px;
 }
 
-/* Modal-window */
+/* MODAL-WINDOW */
 .backdrop {
   position: relative;
   position: fixed;
