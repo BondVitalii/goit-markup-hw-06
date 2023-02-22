@@ -729,6 +729,7 @@ img {
 
 
   border: 1px solid rgba(33, 33, 33, 0.2);
+
   border-radius: 4px;
 
   transition: border-color var(--transit);
@@ -753,6 +754,7 @@ img {
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--primary-bg-cl);
 }
+
 .modal-form-comment {
   display: block;
   width: 100%;
@@ -771,31 +773,44 @@ img {
   line-height: 1.33;
   color: rgba(117, 117, 117, 0.5);
 }
+
+
 .modal-form-policy {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+  margin-bottom: 24px;
+}
+
+.policy-icon-box {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 24px;
-
-  gap: 8px;
-}
-.modal-policy-checkbox {
-  appearance: none;
-  display: block;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
 
   border: 1.25px solid var(--navyblue-dark-bg-cl);
   border-radius: 2px;
+
+  transition: border-color var(--transit), border var(--transit), background var(--transit);
 }
-.modal-policy-checkbox:checked {
-  background-color: var(--pressed-bg-cl);
+.police-icon {
+  opacity: 0;
+  transition: opacity var(--transit), fill var(--transit);
+}
+
+.modal-policy-checkbox:checked + .policy-icon-box {
+  background-color: var(--pressed-txt-cl);
   border-color: var(--pressed-bg-cl);
-
-  transition: var(--transit);
-
 }
+.modal-policy-checkbox:checked + .policy-icon-box > .police-icon {
+  opacity: 1;
+  fill: var(--cloud-light-bg-cl);
+}
+
 .modal-policy-text {
   font-size: 12px;
   line-height: 1.33;
@@ -805,7 +820,6 @@ img {
 
   color: #757575;
 }
-
 .modal-policy-link {
   color: var(--primary-txt-cl);
   transition: color var(--transit);
@@ -816,3 +830,99 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
+
+/** Пробные
+  |============================
+  | .modal-policy-checkbox:focus-within > policy-icon-box {
+      border-color: var(--pressed-bg-cl);
+    }
+
+    .modal-policy-checkbox:focus + .policy-icon-box {
+      border-color: var(--pressed-bg-cl);
+    }
+
+    .modal-policy-checkbox:not(:focus) + .policy-icon-box {
+        border-color: var(--navyblue-dark-bg-cl);
+      }
+
+
+
+    .policy-icon-box:focus {
+      border-color: var(--pressed-bg-cl);
+    }
+
+    .modal-form-policy:focus + .policy-icon-box {
+      border-color: var(--pressed-bg-cl);
+    }
+
+    .policy-icon-box:focus-within > police-icon {
+      border: 1.25px solid var(--pressed-bg-cl);
+      border-color: var(--pressed-bg-cl);
+    }
+  |============================
+*/
+
+/** вариант checkbox 1
+  |============================
+
+ .policy-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    border: 1.25px solid var(--navyblue-dark-bg-cl);
+    border-radius: 2px;
+
+    transition: border-color var(--transit), border var(--transit), background var(--transit);
+  }
+
+
+  .modal-policy-checkbox:focus + .policy-icon-box {
+    border-color: var(--pressed-bg-cl);
+  }
+
+
+  .modal-policy-checkbox:checked + .policy-icon-box {
+    background: var(--pressed-bg-cl);
+    border: transparent;
+  }
+
+
+  .police-icon {
+    opacity: 0;
+    transition: opacity var(--transit), fill var(--transit);
+
+
+  }
+  .modal-policy-checkbox:focus + .policy-icon-box .police-icon {
+    opacity: 1;
+    fill: var(--cloud-light-txt-cl);
+  }
+
+
+  |============================
+*/
+
+/** Ярослав checkbox
+  |============================
+  .modal-policy-checkbox {
+    appearance: none;
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border: 1.25px solid var(--navyblue-dark-bg-cl);
+    border-radius: 2px;
+  }
+  .modal-policy-checkbox:checked {
+    background-color: var(--pressed-bg-cl);
+    border-color: var(--pressed-bg-cl);
+
+    transition: var(--transit);
+  }
+  |============================
+*/
